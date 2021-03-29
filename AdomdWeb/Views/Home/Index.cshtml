@@ -1,0 +1,33 @@
+﻿@model mvc.Models.HomeIndexViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+
+    void RenderCard(string title, string value) {
+        <div class="card text-center">
+            <div class="card-header">
+                @title
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@value</h5>
+            </div>
+        </div>                
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @{ RenderCard("Unidades Vendidas", Model.UnidadesVendidas.ToString("0,0")); }
+    </div>
+    <div class="col-md-4">
+        @{ RenderCard("Importe", Model.Importe.ToString("0,0 EUR")); }
+    </div>
+    <div class="col-md-4">
+        @{ RenderCard("Beneficio", Model.Beneficio.ToString("0.00 %")); }
+    </div>
+</div>
+

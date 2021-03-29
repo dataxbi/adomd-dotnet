@@ -1,0 +1,60 @@
+﻿@model mvc.Models.SalesReportIndexViewModel;
+@{
+    ViewData["Title"] = "Informe de Ventas";
+
+    void RenderCard(string title, string textElementId) {
+        <div class="card text-center">
+            <div class="card-header">
+                @title
+            </div>
+            <div class="card-body">
+                <h5 class="card-title" id="@textElementId"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>                
+    }
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+Año: <select asp-for="Year" asp-items="Model.Years"></select> 
+
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        @{ RenderCard("Unidades Vendidas", "unidadesVendidas"); }
+    </div>
+    <div class="col-md-4">
+        @{ RenderCard("Importe", "importe"); }
+    </div>
+    <div class="col-md-4">
+        @{ RenderCard("Beneficio", "beneficio"); }
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        <div id="unidadesPorCategoria"></div>
+    </div>
+    <div class="col-md-4">
+        <div id="importePorCategoria"></div>
+    </div>
+    <div class="col-md-4">
+        <div id="beneficioPorCategoria"></div>
+    </div>
+</div>
+
+<hr>
+
+<div id="unidadesPorMes"></div>
+<div id="importePorMes"></div>
+<div id="beneficioPorMes"></div>
+
+@section Scripts {
+    <script src="https://unpkg.com/ag-charts-community/dist/ag-charts-community.min.js"></script>
+    <script src="~/js/salesReport.js" asp-append-version="true"></script>
+}
