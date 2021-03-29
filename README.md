@@ -1,4 +1,4 @@
-# ADOMD.NET con .NET
+# Ejecutando consultas DAX desde .NET
 
 Ejemplos del uso de la biblioteca ADOMD.NET para ejecutar consultas DAX desde .NET.
 
