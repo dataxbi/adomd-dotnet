@@ -6,7 +6,7 @@ Estos ejemplos los utilicé en la charla "Ejecutando consultas DAX sobre Power B
 
 Vídeo de la charla: https://youtu.be/2RsyiSTOKwA
 
-Entrada de blog: https://www.dataxbi.com/blog/2021/03/29/experimentos-xmla-powerbi/
+Entrada de blog: https://www.dataxbi.com/blog/2021/03/29/experimentando-xmla-powerbi/
 
 
 Hay 4 proyectos:
